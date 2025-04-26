@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project>
+  <PropertyGroup>
+    <MassTransitVersion>8.2.1</MassTransitVersion>
+    <SerilogVersion>3.1.1</SerilogVersion>
+    <SerilogAspNetCoreVersion>8.0.1</SerilogAspNetCoreVersion>
+    <SerilogExtensionsHostingVersion>8.0.0</SerilogExtensionsHostingVersion>
+    <SerilogSinksAsyncVersion>1.5.0</SerilogSinksAsyncVersion>
+    <SerilogSinksConsoleVersion>5.0.1</SerilogSinksConsoleVersion>
+    <SerilogSinksElasticsearchVersion>10.0.0</SerilogSinksElasticsearchVersion>
+    <WolverineFxFluentValidationVersion>3.12.2</WolverineFxFluentValidationVersion>
+    <AspNetCoreHealthChecksVersion>8.0.0</AspNetCoreHealthChecksVersion>
+	
+    <FluentValidationVersion>11.9.0</FluentValidationVersion>
+	
+    <MicrosoftAspNetCoreAuthenticationInstanceVersion>8.0.2</MicrosoftAspNetCoreAuthenticationInstanceVersion>
+    <MicrosoftAspNetCoreAuthenticationVersion>2.1.1</MicrosoftAspNetCoreAuthenticationVersion>
+    <MicrosoftAspNetCoreHttpVersion>2.1.1</MicrosoftAspNetCoreHttpVersion>
+    <MicrosoftAspNetCoreRoutingVersion>2.1.1</MicrosoftAspNetCoreRoutingVersion>
+    <MicrosoftAspNetCoreVersion>8.0.0</MicrosoftAspNetCoreVersion>
+	
+    <SwashbuckleAspNetCoreVersion>6.4.0</SwashbuckleAspNetCoreVersion>
+	
+    <GoogleProtobufVersion>3.26.1</GoogleProtobufVersion>
+	<MicrosoftAspNetCoreGrpcSwaggerVersion>0.8.5</MicrosoftAspNetCoreGrpcSwaggerVersion>
+    <GrpcToolsVersion>2.63.0</GrpcToolsVersion>
+	
+    <MicrosoftEntityFrameworkCoreToolsDotNetVersion>1.0.0</MicrosoftEntityFrameworkCoreToolsDotNetVersion>
+    <MinioVersion>6.0.3</MinioVersion>
+    <MoqVersion>4.20.70</MoqVersion>
+    <MoqEntityFrameworkCoreVersion>8.0.0.1</MoqEntityFrameworkCoreVersion>
+    <MicrosoftNetTestSdkVersion>17.6.0</MicrosoftNetTestSdkVersion>
+    <NUnitVersion>3.13.3</NUnitVersion>
+    <NUnit3TestAdapterVersion>4.2.1</NUnit3TestAdapterVersion>
+    <NUnitAnalyzersVersion>3.6.1</NUnitAnalyzersVersion>
+    <CoverletCollectorVersion>6.0.0</CoverletCollectorVersion>
+	
+    <PrometheusAspNetCoreVersion>8.2.1</PrometheusAspNetCoreVersion>
+    <WolverineFxVersion>3.12.2</WolverineFxVersion>
+    <OpenTelemetryVersion>1.8.1</OpenTelemetryVersion>
+    <OpenTelemetryInstrumentationRuntimeVersion>1.8.0</OpenTelemetryInstrumentationRuntimeVersion>
+    <OpenTelemetryInstrumentationGrpcNetClientVersion>1.8.0-beta.1</OpenTelemetryInstrumentationGrpcNetClientVersion>
+    <OpenTelemetryExporterPrometheusAspNetCoreVersion>1.8.0-rc.1</OpenTelemetryExporterPrometheusAspNetCoreVersion>
+	<OpenTelemetryInstrumentationEntityFrameworkCoreVersion>1.0.0-beta.11</OpenTelemetryInstrumentationEntityFrameworkCoreVersion>
+	<OpenTelemetryInstrumentationStackExchangeRedisVersion>1.0.0-rc9.14</OpenTelemetryInstrumentationStackExchangeRedisVersion>
+	
+	<ElasticApmNetCoreAllVersion>1.27.1</ElasticApmNetCoreAllVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+	
+    <PackageReference Update="Serilog" Version="$(SerilogVersion)" />
+    <PackageReference Update="Serilog.AspNetCore" Version="$(SerilogAspNetCoreVersion)" />
+    <PackageReference Update="Serilog.Extensions.Hosting" Version="$(SerilogExtensionsHostingVersion)" />
+    <PackageReference Update="Serilog.Sinks.Async" Version="$(SerilogSinksAsyncVersion)" />
+    <PackageReference Update="Serilog.Sinks.Console" Version="$(SerilogSinksConsoleVersion)" />
+    <PackageReference Update="Serilog.Sinks.Elasticsearch" Version="$(SerilogSinksElasticsearchVersion)" />
+    <PackageReference Update="WolverineFx" Version="$(WolverineFxVersion)" />
+    <PackageReference Update="MassTransit" Version="$(MassTransitVersion)" />
+    <PackageReference Update="MassTransit.RabbitMQ" Version="$(MassTransitVersion)" />
+    <PackageReference Update="MassTransit.EntityFrameworkCore" Version="$(MassTransitVersion)" />
+    <PackageReference Update="WolverineFx.FluentValidation" Version="$(WolverineFxFluentValidationVersion)" />
+    <PackageReference Update="FluentValidation" Version="$(FluentValidationVersion)" />
+    <PackageReference Update="FluentValidation.DependencyInjectionExtensions" Version="$(FluentValidationVersion)" />
+	
+    <PackageReference Update="AspNetCore.HealthChecks.NpgSql" Version="$(AspNetCoreHealthChecksVersion)" />
+    <PackageReference Update="AspNetCore.HealthChecks.Rabbitmq" Version="$(AspNetCoreHealthChecksVersion)" />
+	
+    <PackageReference Update="Microsoft.AspNetCore.Authentication.JwtBearer" Version="$(MicrosoftAspNetCoreAuthenticationInstanceVersion)" />
+    <PackageReference Update="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="$(MicrosoftAspNetCoreAuthenticationInstanceVersion)" />
+    <PackageReference Update="Microsoft.AspNetCore.Authentication" Version="$(MicrosoftAspNetCoreAuthenticationVersion)" />
+    <PackageReference Update="Microsoft.AspNetCore.Http.Abstractions" Version="$(MicrosoftAspNetCoreHttpVersion)" />
+    <PackageReference Update="Microsoft.AspNetCore.Http.Extensions" Version="$(MicrosoftAspNetCoreHttpVersion)" />
+    <PackageReference Update="Microsoft.AspNetCore.Routing" Version="$(MicrosoftAspNetCoreRoutingVersion)" />
+    <PackageReference Update="Microsoft.AspNetCore.Hosting.Abstractions" Version="$(MicrosoftAspNetCoreRoutingVersion)" />
+    <PackageReference Update="Minio" Version="$(MinioVersion)" />
+	<PackageReference Update="Microsoft.Extensions.Options" Version="$(MicrosoftAspNetCoreVersion)" />
+    <PackageReference Update="Microsoft.Extensions.Hosting" Version="$(MicrosoftAspNetCoreVersion)" />
+    <PackageReference Update="Microsoft.Extensions.Hosting.Abstractions" Version="$(MicrosoftAspNetCoreVersion)" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="$(MicrosoftAspNetCoreVersion)" />
+    <PackageReference Update="Microsoft.Extensions.Configuration.Abstractions" Version="$(MicrosoftAspNetCoreVersion)" />
+    <PackageReference Update="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(MicrosoftAspNetCoreVersion)" />
+    <PackageReference Update="Microsoft.Extensions.Configuration.Binder" Version="$(MicrosoftAspNetCoreVersion)" />
+	
+    <DotNetCliToolReference Update="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="$(MicrosoftEntityFrameworkCoreToolsDotNetVersion)" />
+    <PackageReference Update="Microsoft.EntityFrameworkCore" Version="$(MicrosoftAspNetCoreVersion)" />
+	<PackageReference Update="Microsoft.EntityFrameworkCore.InMemory" Version="$(MicrosoftAspNetCoreVersion)" />
+	<PackageReference Update="Microsoft.EntityFrameworkCore.Tools" Version="$(MicrosoftAspNetCoreVersion)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Update="Npgsql.EntityFrameworkCore.PostgreSQL" Version="$(MicrosoftAspNetCoreVersion)" />
+	
+    <PackageReference Update="Swashbuckle.AspNetCore" Version="$(SwashbuckleAspNetCoreVersion)" />
+	
+    <PackageReference Update="Google.Protobuf" Version="$(GoogleProtobufVersion)" />
+    <PackageReference Update="Grpc.Net.Client" Version="$(GrpcToolsVersion)" />
+    <PackageReference Update="Grpc.Net.ClientFactory" Version="$(GrpcToolsVersion)" />
+    <PackageReference Update="Grpc.AspNetCore" Version="$(GrpcToolsVersion)" />
+	<PackageReference Update="Grpc.AspNetCore.HealthChecks" Version="$(GrpcToolsVersion)" />
+    <PackageReference Update="Grpc.Tools" Version="$(GrpcToolsVersion)" />
+    <PackageReference Update="Microsoft.AspNetCore.Grpc.Swagger" Version="$(MicrosoftAspNetCoreGrpcSwaggerVersion)" />
+    <PackageReference Update="Grpc.Tools" Version="$(GrpcToolsVersion)" >
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+	
+    <PackageReference Update="Moq" Version="$(MoqVersion)" />
+    <PackageReference Update="Moq.EntityFrameworkCore" Version="$(MoqEntityFrameworkCoreVersion)" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNetTestSdkVersion)" />
+    <PackageReference Update="NUnit" Version="$(NUnitVersion)" />
+    <PackageReference Update="NUnit3TestAdapter" Version="$(NUnit3TestAdapterVersion)" />
+    <PackageReference Update="NUnit.Analyzers" Version="$(NUnitAnalyzersVersion)" />
+    <PackageReference Update="coverlet.collector" Version="$(CoverletCollectorVersion)" />
+	
+	<PackageReference Update="prometheus-net.AspNetCore" Version="$(PrometheusAspNetCoreVersion)" />
+	
+	<PackageReference Update="OpenTelemetry" Version="$(OpenTelemetryVersion)" />
+	<PackageReference Update="OpenTelemetry.Api" Version="$(OpenTelemetryVersion)" />
+	<PackageReference Update="OpenTelemetry.Exporter.Console" Version="$(OpenTelemetryVersion)" />
+	<PackageReference Update="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="$(OpenTelemetryVersion)" />
+	<PackageReference Update="OpenTelemetry.Extensions.Hosting" Version="$(OpenTelemetryVersion)" />
+	<PackageReference Update="OpenTelemetry.Instrumentation.AspNetCore" Version="$(OpenTelemetryVersion)" />
+	<PackageReference Update="OpenTelemetry.Instrumentation.Http" Version="$(OpenTelemetryVersion)" />
+	<PackageReference Update="OpenTelemetry.Instrumentation.Runtime" Version="$(OpenTelemetryInstrumentationRuntimeVersion)" />
+	<PackageReference Update="OpenTelemetry.Instrumentation.GrpcNetClient" Version="$(OpenTelemetryInstrumentationGrpcNetClientVersion)" />
+	<PackageReference Update="OpenTelemetry.Instrumentation.EntityFrameworkCore" Version="$(OpenTelemetryInstrumentationEntityFrameworkCoreVersion)" />
+	<PackageReference Update="OpenTelemetry.Instrumentation.StackExchangeRedis" Version="$(OpenTelemetryInstrumentationStackExchangeRedisVersion)" />
+	<PackageReference Update="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="$(OpenTelemetryExporterPrometheusAspNetCoreVersion)" />
+	
+	<PackageReference Update="Elastic.Apm.NetCoreAll" Version="$(ElasticApmNetCoreAllVersion)" />
+  </ItemGroup>
+</Project>

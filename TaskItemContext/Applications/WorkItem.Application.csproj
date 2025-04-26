@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="AppServices\Contexts\WorkItemComments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="MassTransit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utilities\DbContextSettings\Utilities.DbContextSettings.csproj" />
+    <ProjectReference Include="..\Domain\WorkItem.Domain.csproj" />
+    <ProjectReference Include="..\Infrastructures\WorkItemContext.Infrastructures.csproj" />
+  </ItemGroup>
+
+</Project>
