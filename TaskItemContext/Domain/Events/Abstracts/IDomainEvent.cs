@@ -1,4 +1,4 @@
-﻿namespace TaskExample.Domain.Events.Abstracts
+﻿namespace WorkItem.Domain.Events.Abstracts
 {
     /// <summary>
     /// Маркерный интерфейс для доменных событий.

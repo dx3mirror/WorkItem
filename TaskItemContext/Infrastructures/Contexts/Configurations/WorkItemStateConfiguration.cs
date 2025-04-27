@@ -1,6 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
-using TaskExample.Domain.Enums;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WorkItemContext.Infrastructures.Sagas;
 
 namespace WorkItemContext.Infrastructures.Contexts.Configurations

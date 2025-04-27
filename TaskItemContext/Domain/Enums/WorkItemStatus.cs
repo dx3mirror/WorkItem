@@ -1,4 +1,4 @@
-﻿namespace TaskExample.Domain.Enums
+﻿namespace WorkItem.Domain.Enums
 {
     /// <summary>
     /// Статус рабочего элемента.

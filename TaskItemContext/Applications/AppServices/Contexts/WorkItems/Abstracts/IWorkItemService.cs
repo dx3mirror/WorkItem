@@ -1,5 +1,4 @@
-﻿using TaskExample.Domain.Aggregates;
-using WorkItem.Application.AppServices.Contexts.WorkItems.Models;
+﻿using WorkItem.Application.AppServices.Contexts.WorkItems.Models;
 
 namespace WorkItem.Application.AppServices.Contexts.WorkItems.Abstracts
 {

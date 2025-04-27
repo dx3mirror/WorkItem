@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using TaskExample.Domain.Entities;
+using WorkItem.Domain.Entities;
 
 namespace WorkItemContext.Infrastructures.Contexts.Configurations
 {

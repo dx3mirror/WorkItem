@@ -41,5 +41,10 @@ namespace WorkItemContext.Infrastructures.Sagas
         /// Дата создания состояния.
         /// </summary>
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        /// <summary>
+        /// Идентификатор отложенного сообщения для таймаута.
+        /// </summary>
+        public Guid? TimeoutTokenId { get; set; }
     }
 }

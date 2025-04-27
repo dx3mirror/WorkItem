@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
-using TaskExample.Domain.Aggregates;
 using Utilities.DbContextSettings.Abstracts;
 using WorkItem.Application.AppServices.Contexts.WorkItems.Abstracts;
 using WorkItem.Application.AppServices.Contexts.WorkItems.Models;
+using WorkItem.Domain.Aggregates;
 using WorkItem.Domain.Exceptions;
 
 namespace WorkItem.Application.AppServices.Contexts.WorkItems

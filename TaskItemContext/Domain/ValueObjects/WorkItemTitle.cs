@@ -1,4 +1,4 @@
-﻿namespace TaskExample.Domain.ValueObjects
+﻿namespace WorkItem.Domain.ValueObjects
 {
     /// <summary>
     /// Объект-значение, представляющий заголовок рабочего элемента.

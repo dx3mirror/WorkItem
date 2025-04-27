@@ -1,4 +1,4 @@
-﻿using TaskExample.Domain.ValueObjects;
+﻿using WorkItem.Domain.ValueObjects;
 
 namespace WorkItem.Application.AppServices.Contexts.WorkItems.Models
 {

@@ -1,4 +1,4 @@
-﻿namespace TaskExample.Domain.Utilities
+﻿namespace WorkItem.Domain.Utilities
 {
     /// <summary>
     /// Вспомогательные методы для генерации идентификаторов.

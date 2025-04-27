@@ -1,12 +1,12 @@
-﻿using TaskExample.Domain.Entities;
-using TaskExample.Domain.Enums;
-using TaskExample.Domain.Events;
-using TaskExample.Domain.Events.Abstracts;
-using TaskExample.Domain.Exceptions;
-using TaskExample.Domain.Utilities;
-using TaskExample.Domain.ValueObjects;
+﻿using WorkItem.Domain.Entities;
+using WorkItem.Domain.Enums;
+using WorkItem.Domain.Events;
+using WorkItem.Domain.Events.Abstracts;
+using WorkItem.Domain.Exceptions;
+using WorkItem.Domain.Utilities;
+using WorkItem.Domain.ValueObjects;
 
-namespace TaskExample.Domain.Aggregates
+namespace WorkItem.Domain.Aggregates
 {
     /// <summary>
     /// Агрегатный корень, представляющий рабочий элемент.

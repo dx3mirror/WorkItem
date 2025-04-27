@@ -1,6 +1,6 @@
-﻿using TaskExample.Domain.Events.Abstracts;
+﻿using WorkItem.Domain.Events.Abstracts;
 
-namespace TaskExample.Domain.Events
+namespace WorkItem.Domain.Events
 {
     /// <summary>
     /// Событие, возникающее при установке описания рабочего элемента.

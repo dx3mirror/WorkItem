@@ -1,7 +1,7 @@
-﻿using TaskExample.Domain.Exceptions;
-using TaskExample.Domain.Utilities;
+﻿using WorkItem.Domain.Exceptions;
+using WorkItem.Domain.Utilities;
 
-namespace TaskExample.Domain.Entities
+namespace WorkItem.Domain.Entities
 {
     /// <summary>
     /// Комментарий к рабочему элементу.

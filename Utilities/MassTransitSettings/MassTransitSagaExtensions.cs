@@ -2,6 +2,7 @@
 using MassTransit.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Utilities.MassTransitSettings.Configurations;
 
 namespace Utilities.MassTransitSettings;
 
@@ -21,7 +22,8 @@ public static class MassTransitSagaExtensions
     /// <returns>Обновлённая коллекция сервисов.</returns>
     public static IServiceCollection AddMassTransitSaga<TStateMachine, TState, TSagaDbContext>(
         this IServiceCollection services,
-        string connectionString)
+        string connectionString,
+        RabbitMqConfiguration rabbitMqConfiguration)
         where TStateMachine : MassTransitStateMachine<TState>
         where TState : class, SagaStateMachineInstance
         where TSagaDbContext : DbContext
@@ -46,10 +48,38 @@ public static class MassTransitSagaExtensions
                     cfg.ExistingDbContext<TSagaDbContext>();
                 }));
 
-            x.UsingRabbitMq((context, cfg) =>
+            services.AddMassTransit(x =>
             {
-                cfg.ConfigureEndpoints(context);
+                x.SetKebabCaseEndpointNameFormatter();
+
+                x.AddSagaStateMachine<TStateMachine, TState>();
+
+                x.SetSagaRepositoryProvider(
+                    new EntityFrameworkSagaRepositoryRegistrationProvider(cfg =>
+                    {
+                        cfg.ExistingDbContext<TSagaDbContext>();
+                    }));
+
+                x.AddEntityFrameworkOutbox<TSagaDbContext>(o =>
+                {
+                    o.QueryDelay = TimeSpan.FromSeconds(30);
+                    o.UsePostgres().UseBusOutbox();
+                });
+
+                x.UsingRabbitMq((context, cfg) =>
+                {
+                    cfg.Host(new Uri(rabbitMqConfiguration.Host), h =>
+                    {
+                        h.Username(rabbitMqConfiguration.Username);
+                        h.Password(rabbitMqConfiguration.Password);
+                    });
+
+                    cfg.UseMessageRetry(r => r.Exponential(10, TimeSpan.FromSeconds(5), TimeSpan.FromSeconds(60), TimeSpan.FromSeconds(5)));
+
+                    cfg.ConfigureEndpoints(context);
+                });
             });
+
         });
 
         return services;

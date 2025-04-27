@@ -31,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MassTransitSettings", "Mass
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities.MassTransitSettings", "Utilities\MassTransitSettings\Utilities.MassTransitSettings.csproj", "{BC92298D-C0D7-426C-885E-453EAF730594}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{C4B2B75F-E720-4FBB-86B3-5AAE918B9837}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,7 @@ Global
 		{FEB29B72-3106-436E-BF6C-F6840D693C32} = {46C6B5BD-69F0-4728-ABD7-F4BC85E6641E}
 		{38FDF0EA-1CAD-4FC0-BBB5-1673A45CD29E} = {E9911871-CFC9-41FB-A7DA-82D57AA1ABB7}
 		{BC92298D-C0D7-426C-885E-453EAF730594} = {38FDF0EA-1CAD-4FC0-BBB5-1673A45CD29E}
+		{C4B2B75F-E720-4FBB-86B3-5AAE918B9837} = {202C52AF-E651-45F4-A206-9BBF5C6A26B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E23CD8F6-7321-41DC-AED2-52D43DD8833B}

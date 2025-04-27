@@ -1,4 +1,4 @@
-﻿namespace TaskExample.Domain.Exceptions
+﻿namespace WorkItem.Domain.Exceptions
 {
     /// <summary>
     /// Исключение, выбрасываемое при нарушении бизнес-валидации в домене.

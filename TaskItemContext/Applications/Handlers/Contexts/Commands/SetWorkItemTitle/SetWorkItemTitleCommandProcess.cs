@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using TaskExample.Domain.ValueObjects;
 using WorkItem.Application.AppServices.Contexts.WorkItems.Abstracts;
 using WorkItem.Application.AppServices.Contexts.WorkItems.Models;
 using WorkItem.Application.Handlers.Contexts.Commands.Abstracts;
+using WorkItem.Domain.ValueObjects;
 
 namespace WorkItem.Application.Handlers.Contexts.Commands.SetWorkItemTitle
 {

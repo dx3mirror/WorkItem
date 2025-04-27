@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MassTransit;
+using Microsoft.EntityFrameworkCore;
 using Utilities.DbContextSettings.Configurations;
 using WorkItemContext.Infrastructures.Contexts.Configurations;
 
@@ -16,6 +17,11 @@ namespace WorkItemContext.Infrastructures.Contexts
         public static void OnModelCreating(ModelBuilder modelBuilder)
         {
             ConfigureForecastModels(modelBuilder);
+
+
+            modelBuilder.AddInboxStateEntity();
+            modelBuilder.AddOutboxMessageEntity();
+            modelBuilder.AddOutboxStateEntity();
 
             ModelBuilderExtension.SetDefaultDateTimeKind(modelBuilder, DateTimeKind.Utc);
         }
