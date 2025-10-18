@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stateless" Version="5.17.0" />
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="MassTransit" Version="8.2.1" />
+    <PackageReference Include="MassTransit.EntityFrameworkCore" Version="8.2.1" />
+    <PackageReference Include="MassTransit.Kafka" Version="8.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utilities\DbContextSettings\Utilities.DbContextSettings.csproj" />
+    <ProjectReference Include="..\Contract\Warehouse.ContractProcessing.Сontract.csproj" />
+    <ProjectReference Include="..\Domain\Warehouse.ContractProcessing.Domain.csproj" />
+    <ProjectReference Include="..\Infrastructures\Warehouse.ContractProcessing.Infrastructures.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# S6966: Awaitable method should be used
+dotnet_diagnostic.S6966.severity = none
